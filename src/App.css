@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +22,247 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #9c00c3, #e065fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerBox {
+  min-width: 400px;
+  height: fit-content;
+  width: fit-content;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.heading {
+  margin: 0px 0 0px 0;
+}
+
+.inputwrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.inputwrap label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+.inputwrap label em {
+  color: #ff0000;
+}
+.inputwrap input {
+  border-radius: 5px;
+  border: 1px solid #eee;
+  outline: none;
+  padding: 10px 15px;
+  color: #000;
+}
+.inputwrap input:hover {
+  border-color: #ccc;
+}
+.inputwrap input:focus {
+  border-color: #9c00c3;
+}
+
+.footer-form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.footer-form button {
+  outline: none;
+  border: none;
+  background-color: #9c00c3;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  cursor: pointer;
+}
+.footer-form button:hover {
+  background-color: #e065fe;  
+}
+.footer-form button:disabled {
+  background-color: gray !important;
+}
+.footer-form p {
+  font-weight: 700;
+  color: #000;
+}
+.footer-form p span a {
+  font-weight: 700;
+  color: #9c00c3;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+}   
+.footer-form .error {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #ff0000;
+  text-align: center;
+}
+.dashboard-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 6px #333;
+}
+.dashboard-wrap h1 {
+  margin: 0px;
+}
+.loading-design {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: #9c00c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+button.add-song-btn {
+  outline: none;
+  border: none;
+  background-color: #9c00c3;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: auto;
+  cursor: pointer;
+}
+.song-display-list {
+  padding: 30px;
+}
+.add-song-btn {
+  padding: 30px;
+}
+.add-song-btn .footer-form {
+  display: inline-block;
+}
+
+.song-display-list table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.song-display-list table td, .song-display-list table th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.song-display-list table tr:nth-child(even){background-color: #f2f2f2;}
+
+.song-display-list table tr:hover {background-color: #ddd;}
+
+.song-display-list table th {
+  padding-top: 12px;
+  padding-bottom: 16px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.error-design {
+  color: #ff0000;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  -webkit-animation: under-pressure 0.5s linear infinite both;
+	        animation: under-pressure 0.3s linear infinite both;
+}
+.songs-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0px 30px;
+  align-items: center;
+}
+.songs-header h2 {
+  margin: 0px;
+}
+.playlist-select {
+  display: block;
+  margin: 0px 0 20px 0;
+  width: 100%;
+
+  border-radius: 5px;
+  border: 1px solid #eee;
+  outline: none;
+  padding: 10px 15px;
+  color: #000;
+}
+
+/** animation under-pressure  */
+@-webkit-keyframes under-pressure {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(0px, 2px);
+            transform: translate(0px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(0px, -2px);
+            transform: translate(0px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(0px, 2px);
+            transform: translate(0px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(0px, -2px);
+            transform: translate(0px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes under-pressure {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(0px, 2px);
+            transform: translate(0px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(0px, -2px);
+            transform: translate(0px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(0px, 2px);
+            transform: translate(0px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(0px, -2px);
+            transform: translate(0px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 
 @keyframes App-logo-spin {
