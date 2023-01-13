@@ -12,7 +12,7 @@ import { auth } from "../../firebase";
  * purpose
  * data getting from
  * parent
- *    App
+ * App
  */
 function Login() {
   const navigate = useNavigate();

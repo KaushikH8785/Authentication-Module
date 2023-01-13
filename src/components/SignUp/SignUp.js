@@ -31,7 +31,6 @@ function SignUp() {
         await updateProfile(user, {
           displayName: values.name,
         });
-        //console.log(values);
         navigate("/login");
       })
       .catch((err) => {

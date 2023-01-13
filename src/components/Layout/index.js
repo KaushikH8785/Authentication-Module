@@ -4,7 +4,6 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 
 const Layout = ({ children }) => {
-  //console.log("Layout----");
   const navigate = useNavigate();
   const signOutBtn = () => {
     signOut(auth)

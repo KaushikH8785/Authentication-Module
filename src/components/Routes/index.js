@@ -4,41 +4,40 @@ import Login from "../Login/Login";
 import Dashboard from "../Dashboard/Dashboard";
 import { AuthContextProvider } from "../../context/AuthContext";
 import ProtectedRoute from "../protectedRoute";
-import { DashboardProvider } from "../../context/DashboardContext";
 import PlayListDisplay from "../PlayListDisplay/PlayListDisplay";
 import Layout from "../Layout";
 
 const PageRouter = () => {
   return (
     <Router>
-      <Routes>
+      <AuthContextProvider>
+        <Routes>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/" element={<SignUp />}></Route>
-      </Routes>
-      <Layout>
-        <AuthContextProvider>
-          <Routes>
-            <Route
-              exact
-              path="/dashboard"
-              element={
+          <Route
+            exact
+            path="/dashboard"
+            element={
+              <Layout>
                 <ProtectedRoute>
-                    <Dashboard />
+                  <Dashboard />
                 </ProtectedRoute>
-              }
-            ></Route>
-            <Route
-              exact
-              path="/playlist"
-              element={
+              </Layout>
+            }
+          ></Route>
+          <Route
+            exact
+            path="/playlist"
+            element={
+              <Layout>
                 <ProtectedRoute>
-                    <PlayListDisplay />
+                  <PlayListDisplay />
                 </ProtectedRoute>
-              }
-            ></Route>
-          </Routes>
-        </AuthContextProvider>
-      </Layout>
+              </Layout>
+            }
+          ></Route>
+        </Routes>
+      </AuthContextProvider>
     </Router>
   );
 };

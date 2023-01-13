@@ -12,7 +12,6 @@ function SongAddToPlayListFormPopup() {
     visibilitySaveInPlayList,
     selectedSong
   } = useContext(DashboardContext);
-  //console.log(selectedSong);
   const [selectedPlaylistId, setSelectedPlaylist] = useState("");
 
   const addSongToPlalist = useCallback((e) => {    

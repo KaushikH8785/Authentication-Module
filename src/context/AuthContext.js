@@ -14,6 +14,5 @@ export const AuthContextProvider = ({ children }) => {
 };
 
 export const UserAuth = () => {
-  // console.log(useContext(UserContext))
   return useContext(UserContext);
 };
